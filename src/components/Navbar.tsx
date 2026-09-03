@@ -22,12 +22,18 @@ function Navbar() {
           </li>
         </ul>
 
-        <div onClick={handleMenu} className="flex md:hidden cursor-pointer z-50">
+        <div
+          onClick={handleMenu}
+          className="flex md:hidden cursor-pointer z-50"
+        >
           {!isMenuOpen ? <TextAlignEnd size={25} /> : <XLineTop size={25} />}
         </div>
 
         {isMenuOpen && (
-          <div onClick={handleMenu} className="fixed inset-0 bg-black/30 z-30" />
+          <div
+            onClick={handleMenu}
+            className="fixed inset-0 bg-black/30 z-30"
+          />
         )}
         <div
           className={`fixed left-0 top-0 w-[60%] border-r border-r-gray-200 h-full bg-[#B9C8B2] z-50 
