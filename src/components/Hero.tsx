@@ -32,12 +32,12 @@ function Hero() {
 
         {/* Booking & Explore Button */}
         <div className="flex flex-col sm:flex-row gap-4 mt-15">
-          <button className="bg-[#7B4F2E] hover:bg-[#A47148] text-white font-bold py-3 px-6 rounded flex items-center justify-center gap-2 transition-colors duration-300">
+          <button className="bg-[#7B4F2E] hover:bg-[#A47148] cursor-pointer text-white font-bold py-3 px-6 rounded flex items-center justify-center gap-2 transition-colors duration-300 group">
             Book a session
-            <ArrowRight size={20} />
+            <ArrowRight size={20} className="group-hover:translate-x-2.5 transition-transform duration-300"/>
           </button>
 
-          <button className="border bg-transparent py-3 px-6 text-white hover:bg-white hover:text-[#7B4F2E] transition-colors duration-300 rounded font-semibold">
+          <button className="border bg-transparent cursor-pointer py-3 px-6 text-white hover:bg-white hover:text-[#7B4F2E] transition-colors duration-300 rounded font-semibold">
             Explore Services
           </button>
         </div>

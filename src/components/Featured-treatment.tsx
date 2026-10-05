@@ -3,7 +3,6 @@ import ProductCard from "./product-card";
 function Featured() {
   return (
     <div className="pt-7 sm:pt-10 min-h-screen bg-[#E8E0D5] p-5 sm:px-20">
-
       {/* Featured Texts and Button */}
       <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start">
         <div>
@@ -16,7 +15,7 @@ function Featured() {
           </p>
         </div>
         <div className="pt-5 sm:pt-10">
-          <button className="bg-[#7B4F2E] text-white font-bold text-sm sm:text-base py-2 px-6 rounded-md hover:bg-[#974e1a]">
+          <button className="bg-[#7B4F2E] cursor-pointer text-white font-bold text-sm sm:text-base py-2 px-6 rounded-md hover:bg-[#974e1a]">
             View All Services
           </button>
         </div>
@@ -26,7 +25,6 @@ function Featured() {
       <div className="mt-10">
         <ProductCard limit={3} />
       </div>
-
     </div>
   );
 }
