@@ -2,7 +2,7 @@ import { testimonials } from "../data/testimonials";
 
 function Clients() {
   return (
-    <div className="min-h-125 py-5 px-2 sm:p-5 bg-[#E8E0D5] border-t-2 border-[#faf6f2]">
+    <div className="min-h-[650px] py-5 px-2 sm:p-5 bg-[#E8E0D5] border-t-2 border-[#faf6f2]">
       <div className="p-2 sm:p-8">
         <h1 className="text-2xl sm:text-5xl font-[Inter] uppercase font-bold tracking-[-1.5px] sm:tracking-[-2.5px] sm:leading-[1.2]">
           What our clients say

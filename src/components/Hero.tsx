@@ -15,7 +15,6 @@ function Hero() {
 
       {/* Content Wrapper */}
       <div className="relative z-10 h-full flex flex-col justify-start pt-28 sm:justify-center px-6 sm:px-10 md:px-20">
-
         {/* Hero Texts */}
         <div className="max-w-75 sm:max-w-2xl">
           <p className="text-[13px] sm:text-[15px] pb-5 sm:pb-6 text-[#E8E0D5] font-bold tracking-[3px] sm:tracking-[5px]">
@@ -34,11 +33,20 @@ function Hero() {
         <div className="flex flex-col sm:flex-row gap-4 mt-15">
           <button className="bg-[#7B4F2E] hover:bg-[#A47148] cursor-pointer text-white font-bold py-3 px-6 rounded flex items-center justify-center gap-2 transition-colors duration-300 group">
             Book a session
-            <ArrowRight size={20} className="group-hover:translate-x-2.5 transition-transform duration-300"/>
+            <ArrowRight
+              size={20}
+              className="group-hover:translate-x-2.5 transition-transform duration-300"
+            />
           </button>
 
-          <button className="border bg-transparent cursor-pointer py-3 px-6 text-white hover:bg-white hover:text-[#7B4F2E] transition-colors duration-300 rounded font-semibold">
-            Explore Services
+          <button className="group relative overflow-hidden border border-white bg-transparent cursor-pointer py-3 px-6 text-white transition-colors duration-300 rounded font-semibold isolate">
+            {/* The Center-Out Expanding Layer */}
+            <span className="absolute inset-0 -z-10 block scale-x-0 bg-white transition-transform duration-300 ease-out origin-center group-hover:scale-x-100" />
+
+            {/* Text Transition */}
+            <span className="transition-colors duration-300 group-hover:text-[#7B4F2E]">
+              Explore Services
+            </span>
           </button>
         </div>
       </div>
