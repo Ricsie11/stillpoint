@@ -46,6 +46,7 @@ function Clients() {
                   {testimonial.name}
                 </p>
                 <p className="text-gray-500">{testimonial.date}</p>
+                <img src={testimonial.avatar} alt={testimonial.name} className="w-15 h-15 rounded-full object-cover" />
               </div>
             </div>
           ))}
