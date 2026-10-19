@@ -4,15 +4,15 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <>
+    <div className="flex flex-col min-h-screen">
       <Navbar />
 
-      <main>
+      <main className="grow">
         <Outlet />
       </main>
 
       <Footer />
-    </>
+    </div>
   );
 }
 

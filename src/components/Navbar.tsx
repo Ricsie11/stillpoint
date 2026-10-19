@@ -25,7 +25,7 @@ function Navbar() {
         {/* Desktop Menu View */}
         <ul className="hidden md:flex gap-8 text-xl pr-10 font-medium items-center">
           <li className=" cursor-pointer">
-            <Link to="/services">Services</Link>
+            <Link to="/service">Services</Link>
           </li>{" "}
           <li className=" cursor-pointer">
             <Link to="/about">About</Link>
@@ -67,7 +67,7 @@ function Navbar() {
           </div>
           <ul className="p-4 uppercase font-bold">
             <li className="p-4 border-b border-gray-400 cursor-pointer">
-              <Link to="/services">Services</Link>
+              <Link to="/service">Services</Link>
             </li>
             <li className="p-4 border-b border-gray-400 cursor-pointer">
               <Link to="/about">About</Link>
