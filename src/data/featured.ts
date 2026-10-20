@@ -11,7 +11,7 @@ export const featuredTreatments = [
     title: "Massage Therapy",
     description: "Relieve tension and melt away stress with expert massage techniques. Choose from Swedish for relaxation, deep tissue for muscle knots, or hot stone therapy to boost circulation and calm the nervous system.",
     time: "60 min",
-    price: "$120",
+    price: "₦12,000",
     image: massageImg
   },
   {
@@ -19,7 +19,7 @@ export const featuredTreatments = [
     title: "Facial Treatment",
     description: "Reveal a radiant glow with a deep cleansing facial tailored to your skin type. Includes exfoliation, steam, custom masks, and hydrating serums to detoxify pores and restore healthy skin balance.",
     time: "50 min",
-    price: "$95",
+    price: "₦9,500",
     image: facialImg
   },
   {
@@ -27,7 +27,7 @@ export const featuredTreatments = [
     title: "Body Scrub",
     description: "Buff away dead skin cells for silky smooth results. This full-body exfoliation uses natural sea salt, sugar, or coffee grounds followed by nourishing oils to leave your skin refreshed and glowing.",
     time: "45 min",
-    price: "$85",
+    price: "₦8,500",
     image: scrubImg
   },
   {
@@ -35,23 +35,23 @@ export const featuredTreatments = [
     title: "Body Wrap",
     description: "Detoxify and hydrate from head to toe. We apply therapeutic mud, clay, or seaweed to the body, then wrap you in warmth to draw out impurities, reduce puffiness, and deeply moisturize the skin.",
     time: "60 min",
-    price: "$140",
+    price: "₦14,000",
     image: wrapImg
   },
   {
     id: 5,
-    title: "Manicure and Pedicure",
+    title: "Manicure & Pedicure",
     description: "Complete nail care and relaxation in one. Includes nail shaping, cuticle care, exfoliating scrub, and a soothing massage for hands and feet. Finish with your choice of polish and top coat.",
     time: "60 min",
-    price: "$75",
+    price: "₦7,500",
     image: maniPediImg
   },
   {
     id: 6,
-    title: "Waxing and Hair Removal",
+    title: "Waxing & Hair Removal",
     description: "Enjoy weeks of smooth, hair-free skin. We use premium hot and cold wax to remove hair from the root for face and body areas. Gentle on skin and perfect for long-lasting results.",
     time: "30 min",
-    price: "$55",
+    price: "₦9,500",
     image: waxingImg
   }
 ]

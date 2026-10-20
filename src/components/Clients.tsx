@@ -1,4 +1,5 @@
 import { testimonials } from "../data/testimonials";
+import { MediaImage } from "./MediaLoader";
 
 function Clients() {
   return (
@@ -46,7 +47,12 @@ function Clients() {
                   {testimonial.name}
                 </p>
                 <p className="text-gray-500">{testimonial.date}</p>
-                <img src={testimonial.avatar} alt={testimonial.name} className="w-15 h-15 rounded-full object-cover" />
+                <MediaImage
+                  src={testimonial.avatar}
+                  alt={testimonial.name}
+                  wrapperClassName="w-15 h-15 rounded-full overflow-hidden"
+                  className="w-15 h-15 rounded-full object-cover"
+                />
               </div>
             </div>
           ))}
