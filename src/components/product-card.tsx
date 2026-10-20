@@ -2,19 +2,23 @@ import { featuredTreatments } from "../data/featured";
 
 type Props = {
   limit?: number;
+  className?: string;
 };
 
-function ProductCard({ limit }: Props) {
+function ProductCard({ limit, className = "w-full" }: Props) {
   const productsToShow = limit
     ? featuredTreatments.slice(0, limit)
     : featuredTreatments;
 
   return (
-    <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
+    <>
       {productsToShow.map((product) => (
         <div
           key={product.id}
-          className="flex h-full w-full flex-col overflow-hidden rounded-xl bg-white"
+          className={[
+            "flex flex-col overflow-hidden rounded-xl bg-white shadow-sm",
+            className,
+          ].join(" ")}
         >
           <img
             src={product.image}
@@ -28,20 +32,20 @@ function ProductCard({ limit }: Props) {
             <p className="mt-2 flex-1 text-sm leading-relaxed text-gray-600">
               {product.description}
             </p>
-            <div className="flex justify-between items-center mt-4 text-xl font-bold">
+            <div className="mt-4 flex items-center justify-between text-xl font-bold">
               <span>{product.time}</span>
               <span>{product.price}</span>
             </div>
 
             <div className="mt-auto pt-6">
-              <button className="w-full bg-[#7B4F2E] cursor-pointer text-white font-bold text-sm sm:text-base py-3 rounded-md hover:bg-[#974e1a]">
+              <button className="w-full cursor-pointer rounded-md bg-[#7B4F2E] py-3 text-sm font-bold text-white transition-colors hover:bg-[#974e1a] sm:text-base">
                 Book Now
               </button>
             </div>
           </div>
         </div>
       ))}
-    </div>
+    </>
   );
 }
 

@@ -1,12 +1,10 @@
 import { Link } from "react-router";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
-// FIXED: Changed external single quotes to matching double quotes to stop syntax compilation breakages
 import { SiWhatsapp, SiTiktok } from "@icons-pack/react-simple-icons";
 
 function Footer() {
   return (
-    // FIXED: Changed to a wrapping vertical container, moving flex-row down to an internal grid/flex shell so the hr spans cleanly across the bottom
-    <footer className="w-full bg-[#E8E0D5] p-6 md:p-20 lg:p-25 flex flex-col gap-12">
+    <footer className="w-full bg-[#E8E0D5] border border-gray-400 p-6 md:p-20 lg:p-25 flex flex-col gap-12">
       {/* Content Columns Wrapper */}
       <div className="flex flex-col md:flex-row gap-10 md:gap-16 lg:gap-32">
         {/* Brand Description Column */}
@@ -72,7 +70,7 @@ function Footer() {
           <h3 className="text-lg font-bold text-[#1A1209] uppercase tracking-wider">
             Contact
           </h3>
-          {/* FIXED: Changed from inline block wrapping to full flex layout align framework */}
+          
           <Link
             to="tel:+1234567890"
             className="text-base hover:underline text-gray-800 flex items-center gap-2"
@@ -145,7 +143,8 @@ function Footer() {
         </div>
       </div>
 
-      <hr className="w-full border-t border-gray-600/50" />
+      {/* Horizontal line section */}
+      <hr className="w-full border-t border-gray-400/50" />
 
      
       <div className="text-base text-gray-600 gap-2 flex flex-col sm:flex-row items-center justify-center md:justify-between sm:gap-2 -mt-4">
@@ -159,7 +158,7 @@ function Footer() {
             href="https://alfredwisdom.vercel.app"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#7B4F2E] font-medium hover:underline"
+            className="text-[#7B4F2E] font-medium underline"
           >
             KaydenTech
           </a>
