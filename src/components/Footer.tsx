@@ -94,7 +94,7 @@ function Footer() {
             className="text-base hover:underline text-gray-800 flex items-start gap-2"
           >
             <MapPin size={20} className="mt-1 shrink-0 text-[#7B4F2E]" />
-            <span>123 Serenity Way, Suite A</span>
+            <span>AYA Asokoro, Abuja</span>
           </a>
         </div>
 

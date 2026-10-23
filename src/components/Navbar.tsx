@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { TextAlignEnd, XLineTop } from "lucide-react";
-// FIXED: Imported NavLink alongside Link from react-router
 import { Link, NavLink } from "react-router";
+import { motion } from "framer-motion";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,7 +9,6 @@ function Navbar() {
   const handleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-
 
   const closeMenu = () => {
     setIsMenuOpen(false);
@@ -24,18 +23,24 @@ function Navbar() {
 
   const getMobileNavStyle = ({ isActive }: { isActive: boolean }) =>
     `block w-full py-2 transition-all duration-200 ${
-      isActive ? "text-[#7B4F2E] font-extrabold" : "text-white hover:text-[#7B4F2E]"
+      isActive
+        ? "text-[#7B4F2E] font-extrabold"
+        : "text-white hover:text-[#7B4F2E]"
     }`;
 
   return (
     <nav className="bg-white sticky top-0 z-50">
       <div className="flex justify-between h-20 py-6 items-center px-6 sm:px-10 md:px-20 border-b border-gray-200">
-        
         {/* Logo Block */}
         <Link to="/" className="pl-2 sm:pl-0">
-          <h1 className="text-[#1A1209] cursor-pointer font-bold text-2xl md:text-3xl">
+          <motion.h1
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1, duration: 2 }}
+            className="text-[#1A1209] cursor-pointer font-bold text-2xl md:text-3xl"
+          >
             InfinitiSpa.
-          </h1>
+          </motion.h1>
           <h2 className="text-[#7B4F2E] text-sm md:text-base">
             Massage & Wellness Sanctuary
           </h2>
@@ -43,7 +48,12 @@ function Navbar() {
 
         {/* Desktop Menu View */}
 
-        <ul className="hidden md:flex gap-8 text-xl pr-10 font-medium items-center h-full">
+        <motion.ul
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1, duration: 2 }}
+          className="hidden md:flex gap-8 text-xl pr-10 font-medium items-center h-full"
+        >
           <li className="h-full flex items-center">
             <NavLink to="/services" className={getNavStyle}>
               Services
@@ -61,14 +71,14 @@ function Navbar() {
           </li>
           {/* Button Style Navigation Option */}
           <li>
-            <Link 
-              to="/book" 
+            <Link
+              to="/book"
               className="text-white bg-[#7B4F2E] rounded py-2 px-4 hover:bg-[#A47148] transition-colors duration-300 block text-base font-bold"
             >
               BOOK NOW
             </Link>
           </li>
-        </ul>
+        </motion.ul>
 
         {/* Mobile Menu Button */}
         <div
@@ -87,48 +97,61 @@ function Navbar() {
         )}
 
         {/* Mobile Drawer Overlay Container */}
-        <div
-          className={`fixed left-0 top-0 w-[80%] sm:w-[50%] lg:w-[30%] border border-gray-800 h-full bg-[#1A1209] z-50 
-  transform transition-transform duration-500 ease-in-out 
-  ${isMenuOpen ? "translate-x-0" : "-translate-x-full"}`}
+        <motion.div
+          initial={{ x: "-100%", opacity: 0 }} // Starts completely hidden off-screen left
+          animate={{
+            x: isMenuOpen ? "0%" : "-100%", // Controls the drawer slide state
+            opacity: isMenuOpen ? 1 : 0, // Fades into view cleanly
+          }}
+          transition={{ type: "spring", stiffness: 300, damping: 30 }} // Smooth physics-based slide
+          className="fixed left-0 top-0 w-[80%] sm:w-[50%] lg:w-[30%] border border-gray-800 h-full bg-[#1A1209] z-50"
         >
           <div className="m-4">
             <Link to="/" onClick={closeMenu} className="cursor-pointer">
-              <h1 className="text-white font-bold text-3xl">
-                InfinitiSpa.
-              </h1>
+              <h1 className="text-white font-bold text-3xl">InfinitiSpa.</h1>
             </Link>
             <h2 className="text-[#7B4F2E]">Massage & Wellness Sanctuary</h2>
           </div>
-          
+
           <ul className="p-4 uppercase font-bold text-white flex flex-col gap-2">
-            {/* Integrated active page highlight color styling with auto-close mobile panel commands */}
             <li className="border-b border-gray-700">
-              <NavLink to="/services" onClick={closeMenu} className={getMobileNavStyle}>
+              <NavLink
+                to="/services"
+                onClick={closeMenu}
+                className={getMobileNavStyle}
+              >
                 Services
               </NavLink>
             </li>
             <li className="border-b border-gray-700">
-              <NavLink to="/about" onClick={closeMenu} className={getMobileNavStyle}>
+              <NavLink
+                to="/about"
+                onClick={closeMenu}
+                className={getMobileNavStyle}
+              >
                 About
               </NavLink>
             </li>
             <li className="border-b border-gray-700">
-              <NavLink to="/contact" onClick={closeMenu} className={getMobileNavStyle}>
+              <NavLink
+                to="/contact"
+                onClick={closeMenu}
+                className={getMobileNavStyle}
+              >
                 Contact
               </NavLink>
             </li>
             <li className="mt-4">
-              <Link 
-                to="/book" 
-                onClick={closeMenu} 
+              <Link
+                to="/book"
+                onClick={closeMenu}
                 className="p-3 text-center text-white bg-[#7B4F2E] rounded hover:bg-[#A47148] block transition-all duration-300"
               >
                 BOOK NOW
               </Link>
             </li>
           </ul>
-        </div>
+        </motion.div>
       </div>
     </nav>
   );

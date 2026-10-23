@@ -105,7 +105,7 @@ function Book() {
 
             {selectedList.length === 0 ? (
               <div className="mt-5 rounded-[22px] border border-dashed border-[#E2D7CC] bg-[#F8F5F1] p-4 text-sm text-gray-500 lg:text-base">
-                No services selected yet. Choose one or more treatments to begin.
+                Choose one or more treatments to begin.
               </div>
             ) : (
               <div className="mt-5 space-y-3">

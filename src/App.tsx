@@ -7,7 +7,7 @@ import LoadingSpinner from "./components/LoadingSpinner";
 
 const pageMeta: Record<string, { title: string; description: string }> = {
   "/": {
-    title: "InfinitiSpa | Luxury Spa & Wellness Studio",
+    title: "InfinitiSpa | Luxury Spa & Wellness Lounge",
     description:
       "Experience premium spa treatments and wellness rituals designed to relax, recharge, and restore balance.",
   },

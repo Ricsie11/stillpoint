@@ -1,22 +1,49 @@
+import { useState, useEffect } from "react";
 import hero from "../assets/images/Hero.png";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router";
+import { motion } from "framer-motion";
 
 function Hero() {
+  const [heroLoaded, setHeroLoaded] = useState(false);
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = hero;
+    img.onload = () => {
+      setHeroLoaded(true);
+    };
+  }, []);
+
   return (
-    <div className="relative w-full h-screen bg-cover bg-center">
-      {/* BackgroundImage */}
+    <div className="relative w-full h-screen bg-[#121212] overflow-hidden">
+      {/* 1. Spinner Layer */}
+      {!heroLoaded && (
+        <div className="absolute inset-0 flex items-center justify-center bg-[#121212] z-20">
+          <div className="w-12 h-12 border-4 border-white/20 border-t-[#7B4F2E] rounded-full animate-spin"></div>
+        </div>
+      )}
+
+      {/* 2. Background Image */}
       <div
         style={{ backgroundImage: `url(${hero})` }}
-        className="absolute inset-0 bg-cover bg-center"
+        className={`absolute inset-0 bg-cover bg-center transition-opacity duration-700 ease-in-out ${
+          heroLoaded ? "opacity-100" : "opacity-0"
+        }`}
       ></div>
-      {/* Dark Overlay */}
+
+      {/* 3. Dark Overlay */}
       <div className="absolute inset-0 bg-black/50" />
 
-      {/* Content Wrapper */}
+      {/* 4. Content Wrapper */}
       <div className="relative z-10 h-full flex flex-col justify-start pt-28 sm:justify-center px-6 sm:px-10 md:px-20 lg:px-28 xl:px-32">
         {/* Hero Texts */}
-        <div className="max-w-sm sm:max-w-2xl lg:max-w-3xl">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.5, duration: 3 }}
+          className="max-w-sm sm:max-w-2xl lg:max-w-3xl"
+        >
           <p className="text-[13px] sm:text-[15px] lg:text-sm pb-5 sm:pb-6 text-[#E8E0D5] font-bold tracking-[3px] sm:tracking-[5px] lg:tracking-[4px]">
             A CALMER WAY TO HEAL
           </p>
@@ -29,10 +56,15 @@ function Hero() {
             Experience deep physical relaxation through personalized massage
             care designed to melt away tension and soothe everyday stress.
           </p>
-        </div>
+        </motion.div>
 
         {/* Booking & Explore Button Layout Row */}
-        <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+        <motion.div
+          initial={{ x: "-100vw" }}
+          animate={{ x: 0 }}
+          transition={{ delay: 1, type: "spring", stiffness: 50}}
+          className="mt-8 flex flex-col gap-4 sm:flex-row"
+        >
           {/* Book Session CTA */}
           <Link
             to="/book"
@@ -56,7 +88,7 @@ function Hero() {
               Explore Services
             </span>
           </Link>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
