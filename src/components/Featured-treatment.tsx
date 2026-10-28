@@ -71,10 +71,15 @@ function Featured() {
           </motion.p>
         </div>
 
-        {/* Animated Button (Replaced laggy 100vw layout jump with elegant slide-in) */}
+        
         <motion.div 
           variants={buttonVariants}
-          className="pt-5 sm:pt-10"
+          whileHover={{
+            scale: 1.1,
+            textShadow: "0px 0px 8px rgb(255, 255, 255)",
+            boxShadow: "0px 0px 8px rgb(173, 115, 27)"
+          }}
+          className="mt-5 sm:mt-10 items-center max-sm:w-42 "
         >
           <Link
             to="/services"
@@ -85,7 +90,7 @@ function Featured() {
         </motion.div>
       </div>
 
-      {/* Featured products grid (Slides up cleanly slightly after header) */}
+      
       <motion.div 
         variants={gridVariants}
         className="mt-10 flex w-full flex-col gap-6 md:flex-row md:justify-between md:gap-8"

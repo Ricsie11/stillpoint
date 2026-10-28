@@ -1,22 +1,68 @@
 import { testimonials } from "../data/testimonials";
 import { MediaImage } from "./MediaLoader";
+import { motion } from "framer-motion";
 
 function Clients() {
-  return (
-    <div className="min-h-[650px] py-5 px-2 sm:p-5 bg-[#E8E0D5] border-t-2 border-[#faf6f2]">
-      <div className="p-2 sm:p-8">
-        <h1 className="text-2xl sm:text-5xl font-[Inter] uppercase font-bold tracking-[-1.5px] sm:tracking-[-2.5px] sm:leading-[1.2]">
-          What our clients say
-        </h1>
-        <p className="text-[#6B5D4F] font-[Inter] tracking-[-1.2px] text-[16px] pb-5 sm:text-[22px] pt-2 sm:pt-2 max-w-xl">
-          Real experiences from people who have transformed their health with us
-        </p>
+ 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15, 
+      },
+    },
+  };
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 w-full">
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 30, scale: 0.95 },
+    show: { 
+      opacity: 1, 
+      y: 0, 
+      scale: 1,
+      transition: { type: "spring", stiffness: 100, damping: 15 } 
+    },
+  };
+
+  return (
+    <div className="min-h-162.5 py-12 px-4 sm:px-8 bg-[#E8E0D5] border-t-2 border-[#faf6f2] overflow-hidden">
+      <div className="container mx-auto max-w-7xl">
+        
+       
+        <motion.div 
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="flex flex-col gap-2 mb-10"
+        >
+          
+          <h1 className="text-3xl sm:text-5xl uppercase font-bold tracking-tight text-[#1A1209] leading-tight">
+            What our clients say
+          </h1>
+          
+          <p className="text-[#6B5D4F] text-base sm:text-xl max-w-xl">
+            Real experiences from people who have transformed their health with us
+          </p>
+        </motion.div>
+
+        {/* Card Grid Container */}
+        <motion.div 
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-50px" }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full"
+        >
           {testimonials.map((testimonial) => (
-            <div
+           
+            <motion.div
               key={testimonial.id}
-              className="w-full bg-[#faf0e1] rounded-xl border border-gray-300 shadow-sm hover:shadow-lg transition-shadow p-5 sm:p-6 flex flex-col justify-between space-y-4"
+              variants={cardVariants}
+              whileHover={{ y: -6, scale: 1.02 }}
+              transition={{ duration: 0.2 }}
+              className="w-full bg-[#faf0e1] rounded-2xl border border-gray-300/60 shadow-sm hover:shadow-md transition-shadow p-6 flex flex-col justify-between space-y-4"
             >
               <div>
                 {/* Star Rating */}
@@ -26,7 +72,7 @@ function Clients() {
                       key={i}
                       className={
                         i < testimonial.rating
-                          ? "text-yellow-400 text-lg"
+                          ? "text-yellow-500 text-lg"
                           : "text-gray-300 text-lg"
                       }
                     >
@@ -36,27 +82,31 @@ function Clients() {
                 </div>
 
                 {/* Comment */}
-                <p className="text-gray-700 italic leading-relaxed">
+                <p className="text-gray-700 italic leading-relaxed text-base">
                   "{testimonial.comment}"
                 </p>
               </div>
 
               {/* Author & Date Footer */}
-              <div className="border-t border-gray-300/40 pt-3 mt-4 flex justify-between items-center text-sm">
-                <p className="font-semibold text-gray-900">
-                  {testimonial.name}
-                </p>
-                <p className="text-gray-500">{testimonial.date}</p>
+              <div className="border-t border-gray-300/40 pt-4 mt-4 flex justify-between items-center text-sm">
+                <div className="flex flex-col gap-0.5">
+                  <p className="font-semibold text-gray-900 text-base">
+                    {testimonial.name}
+                  </p>
+                  <p className="text-gray-500 text-xs">{testimonial.date}</p>
+                </div>
+                
+                {/* Profile Image Avatar Wrapper */}
                 <MediaImage
                   src={testimonial.avatar}
                   alt={testimonial.name}
-                  wrapperClassName="w-15 h-15 rounded-full overflow-hidden"
-                  className="w-15 h-15 rounded-full object-cover"
+                  wrapperClassName="w-12 h-12 rounded-full overflow-hidden border border-gray-300/50 shadow-inner"
+                  className="w-12 h-12 rounded-full object-cover"
                 />
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </div>
   );
