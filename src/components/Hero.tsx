@@ -48,7 +48,7 @@ function Hero() {
             A CALMER WAY TO HEAL
           </p>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[3.4rem] leading-tight tracking-[-0.5px] font-black text-white">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.4rem] leading-tight tracking-[-0.5px] font-black text-white">
             Realign your body, restore your balance
           </h1>
 

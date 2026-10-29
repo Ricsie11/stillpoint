@@ -56,7 +56,7 @@ function Featured() {
           {/* Animated Header */}
           <motion.h1 
             variants={textVariants}
-            className="font-[Inter] text-2xl font-bold uppercase tracking-[-1.5px] sm:text-5xl sm:leading-[1.2] sm:tracking-[-2.5px] lg:text-6xl"
+            className="font-[Inter] text-2xl font-bold uppercase tracking-[-1.5px] sm:text-5xl sm:leading-[1.2] sm:tracking-[-2.5px] lg:text-4xl"
           >
             Featured treatments
           </motion.h1>
