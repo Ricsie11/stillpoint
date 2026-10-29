@@ -64,7 +64,7 @@ function Featured() {
           {/* Animated Subtitle */}
           <motion.p 
             variants={textVariants}
-            className="max-w-xl pt-2 text-[16px] tracking-[-1.2px] text-[#6B5D4F] sm:pt-3 sm:text-[22px] lg:text-[26px] lg:leading-relaxed"
+            className="max-w-xl pt-2 text-[16px] tracking-[-1.2px] text-[#6B5D4F] sm:pt-3 sm:text-[22px] lg:text-[18px] lg:leading-relaxed"
           >
             Discover our most popular services designed to help you achieve
             optimal wellness
