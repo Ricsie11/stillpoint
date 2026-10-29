@@ -4,7 +4,7 @@ import { SiWhatsapp, SiTiktok } from "@icons-pack/react-simple-icons";
 
 function Footer() {
   return (
-    <footer className="w-full bg-[#E8E0D5] border border-gray-400 p-6 md:p-20 lg:p-25 flex flex-col gap-12">
+    <footer className="w-full bg-[#E8E0D5] border border-gray-400 p-6 md:p-10 lg:p-15 flex flex-col gap-8">
       {/* Content Columns Wrapper */}
       <div className="flex flex-col md:flex-row gap-10 md:gap-16 lg:gap-20">
         {/* Brand Description Column */}
