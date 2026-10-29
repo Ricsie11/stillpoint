@@ -67,7 +67,7 @@ function Footer() {
 
         {/* Contact Links Column */}
         <div className="flex flex-col gap-3">
-          <h3 className="text-xl font-bold text-[#1A1209] uppercase tracking-wider">
+          <h3 className="text-lg font-bold text-[#1A1209] uppercase tracking-wider">
             Contact
           </h3>
           
@@ -100,7 +100,7 @@ function Footer() {
 
         {/* Hours & Social Operations Column */}
         <div className="flex flex-col gap-3">
-          <h3 className="text-xl font-bold text-[#1A1209] uppercase tracking-wider">
+          <h3 className="text-lg font-bold text-[#1A1209] uppercase tracking-wider">
             Hours of Operation
           </h3>
 
