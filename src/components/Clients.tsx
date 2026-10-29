@@ -1,10 +1,10 @@
 import { testimonials } from "../data/testimonials";
 import { MediaImage } from "./MediaLoader";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 
 function Clients() {
  
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
@@ -15,7 +15,7 @@ function Clients() {
   };
 
 
-  const cardVariants = {
+  const cardVariants: Variants = {
     hidden: { opacity: 0, y: 30, scale: 0.95 },
     show: { 
       opacity: 1, 
@@ -26,7 +26,7 @@ function Clients() {
   };
 
   return (
-    <div className="min-h-162.5 py-12 px-4 sm:px-8 bg-[#E8E0D5] border-t-2 border-[#faf6f2] overflow-hidden">
+    <div className="min-h-[162.5px] py-12 px-4 sm:px-8 bg-[#E8E0D5] border-t-2 border-[#faf6f2] overflow-hidden">
       <div className="container mx-auto max-w-7xl">
         
        

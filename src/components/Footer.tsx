@@ -72,11 +72,11 @@ function Footer() {
           </h3>
           
           <Link
-            to="tel:+1234567890"
+            to="tel:+2349031804859"
             className="text-base hover:underline text-gray-800 flex items-center gap-2"
           >
             <Phone size={20} className="shrink-0 text-[#7B4F2E]" />
-            <span>+1 (234) 567-890</span>
+            <span>+234 (0)9031804859</span>
           </Link>
 
           <Link
@@ -120,7 +120,7 @@ function Footer() {
             {/* Social Icons Layout Section */}
             <div className="pt-2 pl-7 flex items-center gap-4">
               <a
-                href="https://whatsapp.com"
+                href="https://wa.me/+2349031804859"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-green-700 hover:text-[#25D366] transition-colors"

@@ -1,9 +1,9 @@
 import { Link } from "react-router";
 import ProductCard from "./product-card";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -13,7 +13,7 @@ const containerVariants = {
   },
 };
 
-const textVariants = {
+const textVariants: Variants = {
   hidden: { opacity: 0, y: 30 },
   visible: {
     opacity: 1,
@@ -22,7 +22,7 @@ const textVariants = {
   },
 };
 
-const buttonVariants = {
+const buttonVariants: Variants = {
   hidden: { opacity: 0, scale: 0.9, x: 20 },
   visible: {
     opacity: 1,
@@ -32,12 +32,12 @@ const buttonVariants = {
   },
 };
 
-const gridVariants = {
+const gridVariants: Variants = {
   hidden: { opacity: 0, y: 40 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: "easeOut" },
+    transition: { duration: 0.6, ease: "easeOut" as const },
   },
 };
 

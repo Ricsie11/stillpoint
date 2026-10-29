@@ -11,7 +11,7 @@ export const featuredTreatments = [
     title: "Massage Therapy",
     description: "Relieve tension and melt away stress with expert massage techniques. Choose from Swedish for relaxation, deep tissue for muscle knots, or hot stone therapy to boost circulation and calm the nervous system.",
     time: "60 min",
-    price: "₦12,000",
+    price: "₦70,000",
     image: massageImg
   },
   {

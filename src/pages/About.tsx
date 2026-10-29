@@ -1,10 +1,9 @@
-import React from "react";
 import hope from "../assets/hope.jpg";
 import { MediaImage } from "../components/MediaLoader";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 
 function About() {
-  const textContainerVariants = {
+  const textContainerVariants: Variants = {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
@@ -14,9 +13,9 @@ function About() {
     },
   };
 
-  const textItemVariants = {
+  const textItemVariants: Variants = {
     hidden: { opacity: 0, y: 15 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+    show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" as const } },
   };
 
   return (
@@ -24,10 +23,12 @@ function About() {
       {/* Founder Section Container */}
       <div className="container mx-auto px-6 max-w-8xl">
         <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16 lg:gap-24">
+          
           {/* Portrait Image Column */}
           <motion.main
             initial={{ opacity: 0, x: -40 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.7, ease: "easeOut" }}
             className="w-full md:w-1/2 flex items-center justify-center"
           >
@@ -43,7 +44,8 @@ function About() {
           <motion.aside
             variants={textContainerVariants}
             initial="hidden"
-            animate="show"
+            whileInView="show"
+            viewport={{ once: true, margin: "-100px" }}
             className="w-full md:w-1/2 flex flex-col gap-4 text-center md:text-left"
           >
             {/* Title Group */}
@@ -109,7 +111,6 @@ function About() {
             </h2>
 
             {/* Decorative Divider Line */}
-
             <motion.div
               initial={{ scaleX: 0 }}
               whileInView={{ scaleX: 1 }}
