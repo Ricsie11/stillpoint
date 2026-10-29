@@ -44,15 +44,15 @@ function Hero() {
           transition={{ delay: 1.5, duration: 3 }}
           className="max-w-sm sm:max-w-2xl lg:max-w-3xl"
         >
-          <p className="text-[13px] sm:text-[15px] lg:text-sm pb-5 sm:pb-6 text-[#E8E0D5] font-bold tracking-[3px] sm:tracking-[5px] lg:tracking-[4px]">
+          <p className="text-[10px] sm:text-[15px] lg:text-sm pb-5 sm:pb-6 text-[#E8E0D5] font-bold tracking-[3px] sm:tracking-[5px] lg:tracking-[4px]">
             A CALMER WAY TO HEAL
           </p>
 
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.6rem] leading-tight tracking-[-0.5px] font-black text-white">
+          <h1 className="text-3xl sm:text-3xl md:text-4xl lg:text-[2.6rem] leading-tight tracking-[-0.5px] font-black text-white">
             Realign your body, restore your balance
           </h1>
 
-          <p className="text-[#E8E0D5] text-base sm:text-lg lg:text-lg leading-relaxed pt-4 sm:pt-5 max-w-2xl">
+          <p className="text-[#E8E0D5] text-[10px] sm:text-lg lg:text-lg leading-relaxed pt-4 sm:pt-5 max-w-2xl">
             Experience deep physical relaxation through personalized massage
             care designed to melt away tension and soothe everyday stress.
           </p>
