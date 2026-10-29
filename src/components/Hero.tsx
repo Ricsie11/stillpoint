@@ -48,11 +48,11 @@ function Hero() {
             A CALMER WAY TO HEAL
           </p>
 
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.4rem] leading-tight tracking-[-0.5px] font-black text-white">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.6rem] leading-tight tracking-[-0.5px] font-black text-white">
             Realign your body, restore your balance
           </h1>
 
-          <p className="text-[#E8E0D5] text-base sm:text-lg lg:text-xl leading-relaxed pt-4 sm:pt-5 max-w-2xl">
+          <p className="text-[#E8E0D5] text-base sm:text-lg lg:text-lg leading-relaxed pt-4 sm:pt-5 max-w-2xl">
             Experience deep physical relaxation through personalized massage
             care designed to melt away tension and soothe everyday stress.
           </p>
