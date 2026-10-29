@@ -6,7 +6,7 @@ function Footer() {
   return (
     <footer className="w-full bg-[#E8E0D5] border border-gray-400 p-6 md:p-20 lg:p-25 flex flex-col gap-12">
       {/* Content Columns Wrapper */}
-      <div className="flex flex-col md:flex-row gap-10 md:gap-16 lg:gap-32">
+      <div className="flex flex-col md:flex-row gap-10 md:gap-16 lg:gap-20">
         {/* Brand Description Column */}
         <div className="flex flex-col max-w-sm">
           <Link to="/" className="cursor-pointer inline-block">
@@ -26,7 +26,7 @@ function Footer() {
 
         {/* Navigation Menu Column */}
         <div className="flex flex-col gap-4">
-          <h2 className="text-lg font-bold text-[#1A1209] uppercase tracking-wider">
+          <h2 className="text-xl font-bold text-[#1A1209] uppercase tracking-wider">
             Navigation
           </h2>
           <ul className="flex flex-col gap-3">
@@ -67,7 +67,7 @@ function Footer() {
 
         {/* Contact Links Column */}
         <div className="flex flex-col gap-3">
-          <h3 className="text-lg font-bold text-[#1A1209] uppercase tracking-wider">
+          <h3 className="text-xl font-bold text-[#1A1209] uppercase tracking-wider">
             Contact
           </h3>
           
@@ -100,7 +100,7 @@ function Footer() {
 
         {/* Hours & Social Operations Column */}
         <div className="flex flex-col gap-3">
-          <h3 className="text-lg font-bold text-[#1A1209] uppercase tracking-wider">
+          <h3 className="text-xl font-bold text-[#1A1209] uppercase tracking-wider">
             Hours of Operation
           </h3>
 
