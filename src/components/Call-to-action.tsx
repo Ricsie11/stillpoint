@@ -12,8 +12,8 @@ function CallToAction() {
       {/* Dark Overlay */}
       <div className="absolute bg-black/60 inset-0" />
 
-      <div className="relative z-10 items-center justify-start p-15 sm:p-30 lg:p-38">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight">
+      <div className="relative z-10 items-center justify-start p-10 sm:p-20 lg:p-28">
+        <h2 className="text-3xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white leading-tight">
           Ready to Feel Your Best?
         </h2>
         <p className="text-[#E8E0D5] text-lg sm:text-xl lg:text-2xl mt-4 max-w-2xl leading-relaxed">
