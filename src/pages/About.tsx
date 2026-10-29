@@ -1,4 +1,4 @@
-import hope from "../assets/hope.jpg";
+import hope from "../assets/Hope.jpg";
 import { MediaImage } from "../components/MediaLoader";
 import { motion, type Variants } from "framer-motion";
 
