@@ -29,7 +29,7 @@ function Footer() {
           <h2 className="text-xl font-bold text-[#1A1209] uppercase tracking-wider">
             Navigation
           </h2>
-          <ul className="flex flex-col gap-3">
+          <ul className="flex flex-col gap-2">
             <li>
               <Link
                 to="/services"
