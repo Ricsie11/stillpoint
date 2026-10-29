@@ -16,13 +16,13 @@ function CallToAction() {
         <h2 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-bold text-white leading-tight">
           Ready to Feel Your Best?
         </h2>
-        <p className="text-[#E8E0D5] text-lg sm:text-xl lg:text-2xl mt-4 max-w-2xl leading-relaxed">
+        <p className="text-[#E8E0D5] text-lg sm:text-xl mt-4 max-w-2xl leading-relaxed">
           Your journey to a healthier, more comfortable life starts here.
         </p>
 
         <Link
           to="/book"
-          className="group relative mt-8 inline-flex items-center gap-2 overflow-hidden rounded-md border border-white bg-white/5 px-8 py-3 text-white transition-colors duration-300 hover:bg-white/10"
+          className="group relative mt-8 inline-flex items-center gap-2 overflow-hidden rounded-md border border-white bg-white/5 px-5 py-3 text-white transition-colors duration-300 hover:bg-white/10"
         >
           <span className="absolute inset-0 -z-10 block w-[140%] -translate-x-full skew-x-12 bg-[#E8E0D5] transition-transform duration-500 ease-out group-hover:translate-x-[-15%]" />
 
